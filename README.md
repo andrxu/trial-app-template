@@ -10,4 +10,5 @@ sudo npm install -g mean-cli
 cd trial-app-template
 mean init my-trial-app
 ```
-
+4. follow instructions once mean init is finished installing you app
+5. touch base with your skawtus evaluator on project specs.
