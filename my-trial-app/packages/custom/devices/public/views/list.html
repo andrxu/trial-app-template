@@ -1,0 +1,17 @@
+<section data-ng-controller="DevicesController" data-ng-init="find()">
+    <span>Devices</span>
+    <ul class="devices unstyled">
+    <li data-ng-repeat="device in devices">
+        <a data-ng-href="#!/devices/{{device._id}}">{{device.name}}</a>
+        <span data-ng-if="hasAuthorization(device)">
+          <a class="btn" href="/#!/devices/{{device._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(device);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+    </li>
+  </ul>
+  <h1 data-ng-hide="!devices || devices.length">No devices yet. <br> Why don't you <a href="/#!/devices/create">Create One</a>?</h1>
+</section>

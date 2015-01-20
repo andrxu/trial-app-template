@@ -1,0 +1,14 @@
+<section data-ng-controller="DevicesController" data-ng-init="findOne()">
+  <span>{{device.created | date:'medium'}}</span> /
+  <span>{{device.user.name}}</span>
+  <h2>{{device.name}}</h2>
+  <div>Period: {{device.period}}</div>
+  <div data-ng-if="hasAuthorization(device)">
+    <a class="btn" href="/#!/devices/{{device._id}}/edit">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn" data-ng-click="remove(device);">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+</section>
